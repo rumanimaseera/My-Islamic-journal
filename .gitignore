@@ -1,0 +1,36 @@
+# 🔒 Firebase secret config
+firebase_config.json
+
+# 🚫 Python cache
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# 🗂 Environment files
+.env
+*.env
+
+# 💻 Mac/Linux/Windows system files
+.DS_Store
+Thumbs.db
+
+# 🧪 Virtual environments (if any)
+.venv/
+venv/
+ENV/
+env/
+
+# 🧪 Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# 📦 Node dependencies (in case firebase.js uses npm)
+node_modules/
+
+# 📁 Streamlit config cache
+.streamlit/config.toml
+
+# 👻 VSCode/IDE settings (optional)
+.vscode/
+.idea/

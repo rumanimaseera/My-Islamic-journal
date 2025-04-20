@@ -1,0 +1,9 @@
+streamlit
+firebase-admin
+transformers
+torch
+pandas
+altair
+python-dotenv
+requests
+numpy

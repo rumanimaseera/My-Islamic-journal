@@ -1,0 +1,7 @@
+[theme]
+base = "dark"
+primaryColor = "#522F2F"           # Rich maroon/brown tone
+backgroundColor = "#262730"        # Dark grey background
+secondaryBackgroundColor = "#333542"  # Slightly lighter background for contrast
+textColor = "#FFFFFF"              # White text for readability
+font = "monospace"                 # Clean, techy look
