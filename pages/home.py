@@ -105,15 +105,12 @@ if "current_section" not in st.session_state:
     st.session_state.current_section = "Home"
 
 def navigate_to(section):
+    st.write(f"Navigating to: {section}")
     if section == "Login":
-        # Switch to the authentication page (no '.py' extension needed)
         st.switch_page("authentication")  # Ensure this matches the page name without '.py'
-    elif section:
-        # Store the current section in session state for navigation purposes
-        st.session_state.current_section = section
     else:
-        # Handle undefined section (optional)
-        st.warning("Invalid section specified.")
+        st.session_state.current_section = section
+
 
 # ========================
 # 6) Buttons & Styling
