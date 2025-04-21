@@ -107,13 +107,18 @@ if "current_section" not in st.session_state:
 def navigate_to(section):
     st.write(f"Navigating to: {section}")
     
-    # Clear the session state before navigating
-    st.session_state.clear()  # Clears the session state
+    # Save current section to session state before clearing
+    st.session_state.current_section = section
+
+    # Clear the session state (if necessary)
+    st.session_state.clear()
 
     if section == "Login":
         st.switch_page("authentication")  # Ensure this matches the page name without '.py'
     else:
+        # Set the new section after clearing session state
         st.session_state.current_section = section
+
 
 # ========================
 # 6) Buttons & Styling
