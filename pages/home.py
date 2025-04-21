@@ -106,7 +106,7 @@ if "current_section" not in st.session_state:
 
 def navigate_to(section):
     if section == "Login":
-        st.switch_page("pages/authentication.py")  # This assumes authentication.py is inside 'pages/' directory
+        st.switch_page("pages/1_authentication.py")  # This assumes authentication.py is inside 'pages/' directory
     else:
         st.session_state.current_section = section
 
