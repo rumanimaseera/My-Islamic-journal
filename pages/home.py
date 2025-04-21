@@ -227,7 +227,9 @@ elif st.session_state.current_section == "Prayers":
                 </div>
             """, unsafe_allow_html=True)
 
-# Social Media Links Footer
+# ========================
+# 9) Social Media Footer
+# ========================
 st.markdown(
     """
     <style>
@@ -250,12 +252,6 @@ st.markdown(
         color: #9c6b30;
     }
     </style>
-    """,
-    unsafe_allow_html=True
-)
-
-st.markdown(
-    """
     <div class="footer">
         <div class="social-links">
             <a href="https://www.instagram.com/zyha.deen?igsh=MW51amk4eHVic280Zw==" target="_blank">Instagram</a>
