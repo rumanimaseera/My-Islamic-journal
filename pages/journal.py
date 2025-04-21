@@ -16,7 +16,7 @@ def get_base64_of_image(image_path):
         st.error(f"Image file not found: {image_path}")
         return None
 
-image_path = r"C:\Users\91887\VMJ_new\photos\vintage2.jpg"
+image_path = r"C:\Users\91887\Islamic_journal\photos\vintage2.jpg"
 image_base64 = get_base64_of_image(image_path)
 
 # PAGE CONFIG
