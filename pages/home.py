@@ -112,7 +112,7 @@ def navigate_to(section):
 
     if section == "Login":
         # Ensure the page name matches the one in your app structure
-        st.switch_page("authentication")  # Page name should be 'authentication', not 'authentication.py'
+        st.switch_page("pages/authentication.py")  # Page name should be 'authentication', not 'authentication.py'
     else:
         # Set the new section after clearing session state
         st.session_state.current_section = section
