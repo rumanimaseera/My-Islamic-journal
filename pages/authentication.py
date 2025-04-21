@@ -4,6 +4,7 @@ import time
 import base64
 from database import save_user, authenticate_user
 
+# Set page configuration
 st.set_page_config(page_title="🔐 Authentication", layout="centered")
 
 # Background image setup
@@ -40,7 +41,7 @@ if image_base64:
 st.markdown('<h1>User Authentication</h1>', unsafe_allow_html=True)
 
 # Radio buttons for Login/Register
-st.markdown("""
+st.markdown(""" 
 <style>
 .stRadio > div[role='radiogroup'] label {
     background-color: rgba(90, 60, 30, 0.7);
@@ -82,7 +83,11 @@ if auth_mode == "Login":
             st.success("✅ Login Successful! Redirecting...")
             st.session_state["user"] = username
             time.sleep(1)
-            # Use experimental_rerun() to reload the page and simulate navigation
-            st.experimental_rerun()  
+            
+            # Use st.experimental_rerun to trigger a page reload for navigation
+            if "user" in st.session_state:
+                # This is where the page navigation can happen, if needed
+                st.session_state['auth_mode'] = 'Login'
+                st.experimental_rerun()
         else:
             st.error("❌ Invalid Credentials. Try Again.")
