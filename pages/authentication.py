@@ -82,6 +82,6 @@ if auth_mode == "Login":
             st.success("✅ Login Successful! Redirecting...")
             st.session_state["user"] = username
             time.sleep(1)
-            st.switch_page("pages/journal.py")
+            st.switch_page("Journal")  # Page name is "Journal", not the path
         else:
             st.error("❌ Invalid Credentials. Try Again.")
