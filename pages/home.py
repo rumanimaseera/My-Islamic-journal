@@ -17,7 +17,7 @@ def get_base64_of_image(image_path):
         st.error(f"Image file not found: {image_path}")
         return None
 
-image_path = r"C:\Users\91887\Islamic_journal\photos\vintage2.jpg"
+image_path = "photos/vintage2.jpg"  # ✅ Just the relative path
 image_base64 = get_base64_of_image(image_path)
 
 if image_base64:
@@ -25,7 +25,7 @@ if image_base64:
         f"""
         <style>
         .stApp {{
-            background: url("data:image/webp;base64,{image_base64}") no-repeat center center fixed;
+            background: url("data:image/jpg;base64,{image_base64}") no-repeat center center fixed;
             background-size: cover;
         }}
         </style>
@@ -227,7 +227,7 @@ elif st.session_state.current_section == "Prayers":
                 </div>
             """, unsafe_allow_html=True)
 
-# Social Media Links
+# Social Media Links Footer
 st.markdown(
     """
     <style>
