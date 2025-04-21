@@ -82,6 +82,7 @@ if auth_mode == "Login":
             st.success("✅ Login Successful! Redirecting...")
             st.session_state["user"] = username
             time.sleep(1)
-            st.switch_page("Journal")  # Page name is "Journal", not the path
+            # Use experimental_rerun() to reload the page and simulate navigation
+            st.experimental_rerun()  
         else:
             st.error("❌ Invalid Credentials. Try Again.")
