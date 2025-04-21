@@ -103,14 +103,17 @@ st.markdown("""
 # ========================
 if "current_section" not in st.session_state:
     st.session_state.current_section = "Home"
-
+    
 def navigate_to(section):
     st.write(f"Navigating to: {section}")
+    
+    # Clear the session state before navigating
+    st.session_state.clear()  # Clears the session state
+
     if section == "Login":
         st.switch_page("authentication")  # Ensure this matches the page name without '.py'
     else:
         st.session_state.current_section = section
-
 
 # ========================
 # 6) Buttons & Styling
