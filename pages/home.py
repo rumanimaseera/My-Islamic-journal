@@ -107,7 +107,7 @@ if "current_section" not in st.session_state:
 def navigate_to(section):
     if section == "Login":
         # Switch to the authentication page (no '.py' extension needed)
-        st.switch_page("authentication")  # Ensure this matches the page name without '.py'
+        st.switch_page("pages/authentication.py")  # Ensure this matches the page name without '.py'
     elif section:
         # Store the current section in session state for navigation purposes
         st.session_state.current_section = section
